@@ -1,0 +1,9 @@
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\negocio\bin\Debug\negocio.dll
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\negocio\bin\Debug\negocio.pdb
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\negocio\bin\Debug\modelo.dll
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\negocio\bin\Debug\modelo.pdb
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\negocio\obj\Debug\negocio.csproj.CopyComplete
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\negocio\obj\Debug\negocio.dll
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\negocio\obj\Debug\negocio.pdb

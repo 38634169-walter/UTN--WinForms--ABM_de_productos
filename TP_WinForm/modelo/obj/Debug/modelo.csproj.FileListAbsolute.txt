@@ -1,0 +1,6 @@
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\modelo\bin\Debug\modelo.dll
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\modelo\bin\Debug\modelo.pdb
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\modelo\obj\Debug\modelo.csproj.AssemblyReference.cache
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\modelo\obj\Debug\modelo.csproj.CoreCompileInputs.cache
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\modelo\obj\Debug\modelo.dll
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\modelo\obj\Debug\modelo.pdb
