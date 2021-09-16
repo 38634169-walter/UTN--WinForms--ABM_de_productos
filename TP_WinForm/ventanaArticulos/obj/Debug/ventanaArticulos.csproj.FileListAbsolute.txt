@@ -13,3 +13,19 @@ C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TP
 C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.csproj.CopyComplete
 C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.exe
 C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.pdb
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\bin\Debug\ventanaArticulos.exe.config
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\bin\Debug\ventanaArticulos.exe
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\bin\Debug\ventanaArticulos.pdb
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\bin\Debug\modelo.dll
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\bin\Debug\negocio.dll
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\bin\Debug\modelo.pdb
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\bin\Debug\negocio.pdb
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.Form1.resources
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.Properties.Resources.resources
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.csproj.CopyComplete
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.exe
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.pdb
+C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.FrmNuevoArticulo.resources

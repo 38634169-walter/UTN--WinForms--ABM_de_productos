@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using modelo;
+using negocio;
 
 namespace negocio
 {
@@ -40,6 +41,25 @@ namespace negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public void agregar (Articulo nuevo)
+        {
+            ConexionDB datos = new ConexionDB();
+            try
+            {
+                datos.consultar("INSERT into ARTICULOS (Codigo, Nombre, Descripcion) VALUES ('"+ nuevo.codigo +"', '"+ nuevo.nombre +"', '"+ nuevo.descripcion +"')");
+                datos.abrir_conexion_y_ejecutar();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrar_conexion();
             }
         }
     }

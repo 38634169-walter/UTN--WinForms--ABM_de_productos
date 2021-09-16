@@ -67,6 +67,7 @@ namespace ventanaArticulos
             this.buttonAgregar.TabIndex = 2;
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.UseVisualStyleBackColor = true;
+            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
             // labelDatosArticulo
             // 
@@ -85,7 +86,9 @@ namespace ventanaArticulos
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.pictureBoxArticulo);
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulos ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).EndInit();
