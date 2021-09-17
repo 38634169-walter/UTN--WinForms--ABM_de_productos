@@ -111,5 +111,10 @@ namespace ventanaArticulos
         {
             Close();
         }
+
+        private void pictureBoxMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
