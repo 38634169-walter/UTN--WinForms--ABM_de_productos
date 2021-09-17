@@ -55,5 +55,23 @@ namespace ventanaArticulos
             Articulo art = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             mostrar_datos_articulo(art.imagenUrl,art.descripcion,art.precio,art.marca.descripcion,art.categoria.descripcion);
         }
+
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+            FrmNuevoArticulo alta = new FrmNuevoArticulo();
+            alta.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Articulo art =(Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            FrmNuevoArticulo ventana = new FrmNuevoArticulo(art);
+            ventana.ShowDialog();       
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

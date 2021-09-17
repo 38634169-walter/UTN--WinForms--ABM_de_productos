@@ -8,6 +8,7 @@ namespace modelo
 {
     public class Categoria
     {
+        public int id;
         public string descripcion;
 
         public override string ToString()

@@ -4,11 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.ComponentModel;
+
 namespace modelo
 {
     public class Articulo
     {
+        public int id;
+        [DisplayName("Articulo")]
         public string codigo { get; set; }
+        [DisplayName("Nombre")]
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public Marca marca { get; set; }
