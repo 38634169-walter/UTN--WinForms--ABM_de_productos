@@ -106,5 +106,10 @@ namespace ventanaArticulos
         {
             cargar_imagen(textBoxImagen.Text);
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
