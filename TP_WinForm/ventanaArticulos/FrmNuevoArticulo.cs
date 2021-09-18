@@ -36,47 +36,71 @@ namespace ventanaArticulos
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            try
+            bool validar = true;
+            foreach (Control v in (this.Controls))
             {
-                if (art == null) art = new Articulo();
-
-                art.codigo = textBoxImagen.Text;
-                art.nombre = textBoxNombre.Text;
-                art.imagenUrl = textBoxImagen.Text;
-                art.descripcion = textBoxDescripcion.Text;
-                art.marca = (Marca)comboBoxMarca.SelectedItem;
-                art.categoria = (Categoria)comboBoxCategoria.SelectedItem;
-                if(art.id != 0)
+                if (v is TextBox)
                 {
-                    negocio.modificar(art);
-                    MessageBox.Show("Se modifico correctamente");
+                    if (v.Text == "")
+                    {
+                        validar = false;
+                        v.ForeColor = Color.White;
+                        v.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        v.ForeColor = Color.Black;
+                        v.BackColor = System.Drawing.SystemColors.Control;
+                    }
                 }
-                else
-                {
-                    negocio.agregar(art);
-                    MessageBox.Show("Articulo Agregado");
-                }
-                Close();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
+            if (validar == true) {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                try
+                {
+                    if (art == null)
+                    {
+                        art = new Articulo();
+                    }
+
+                    art.codigo = textBoxCodigo.Text;
+                    art.nombre = textBoxNombre.Text;
+                    art.imagenUrl = textBoxImagen.Text;
+                    art.descripcion = textBoxDescripcion.Text;
+                    art.precio = Convert.ToDouble(textBoxPrecio.Text);
+                    art.marca = (Marca)comboBoxMarca.SelectedItem;
+                    art.categoria = (Categoria)comboBoxCategoria.SelectedItem;
+                    if (art.id != 0)
+                    {
+                        negocio.modificar(art);
+                        MessageBox.Show("Se modifico correctamente");
+                    }
+                    else
+                    {
+                        negocio.agregar(art);
+                        MessageBox.Show("Articulo Agregado");
+                    }
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
         }
 
         private void FrmNuevoArticulo_Load(object sender, EventArgs e)
         {
             pictureBoxVerImagen.Load("https://st4.depositphotos.com/17828278/24401/v/600/depositphotos_244011872-stock-illustration-no-image-vector-symbol-missing.jpg");
-            Marca mar = new Marca();
-            Categoria cat = new Categoria();
+            MarcaNegocio mar = new MarcaNegocio();
+            CategoriaNegocio cat = new CategoriaNegocio();
             
-            //comboBoxMarca.DataSource = mar.listar();
-            //comboBoxMarca.ValueMember = "Id";
-            //comboBoxMarca.DisplayMember = "Descripcion";
-            //comboBoxCategoria.DataSource = cat.listar();
-            //comboBoxCategoria.ValueMember = "Id";
-            //comboBoxCategoria.DisplayMember = "Descripcion";
+            comboBoxMarca.DataSource = mar.listar();
+            comboBoxMarca.ValueMember = "id";
+            comboBoxMarca.DisplayMember = "descripcion";
+            comboBoxCategoria.DataSource = cat.listar();
+            comboBoxCategoria.ValueMember = "id";
+            comboBoxCategoria.DisplayMember = "descripcion";
 
             if(art != null)
             {
@@ -85,8 +109,9 @@ namespace ventanaArticulos
                 textBoxImagen.Text = art.imagenUrl;
                 textBoxDescripcion.Text = art.descripcion;
                 cargar_imagen(art.imagenUrl);
-                comboBoxMarca.SelectedItem = art.marca.id;
-                comboBoxCategoria.SelectedItem = art.categoria.id;
+                textBoxPrecio.Text = art.precio.ToString();
+                comboBoxMarca.SelectedValue = art.marca.id;
+                comboBoxCategoria.SelectedValue = art.categoria.id;
             }
         }
         public void cargar_imagen(string imagen)

@@ -23,6 +23,11 @@ namespace ventanaArticulos
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cargar_form();
+        }
+
+        public void cargar_form()
+        {
             ArticuloNegocio articuloNeg = new ArticuloNegocio();
             listaArticulos = articuloNeg.listar();
             dgvArticulos.DataSource = listaArticulos;
@@ -31,8 +36,10 @@ namespace ventanaArticulos
             dgvArticulos.Columns["marca"].Visible = false;
             dgvArticulos.Columns["categoria"].Visible = false;
             dgvArticulos.Columns["precio"].Visible = false;
+            dgvArticulos.Columns["id"].Visible = false;
             mostrar_datos_articulo(listaArticulos[0].imagenUrl,listaArticulos[0].descripcion,listaArticulos[0].precio,listaArticulos[0].marca.descripcion,listaArticulos[0].categoria.descripcion);
         }
+
         public void mostrar_datos_articulo(string imagen,string descripcion,double precio,string marca,string categoria)
         {
             labelDatosArticulo.Text = "Precio: $" + precio + "\r\n" +
@@ -60,13 +67,15 @@ namespace ventanaArticulos
         {
             FrmNuevoArticulo alta = new FrmNuevoArticulo();
             alta.ShowDialog();
+            cargar_form();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Articulo art =(Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             FrmNuevoArticulo ventana = new FrmNuevoArticulo(art);
-            ventana.ShowDialog();       
+            ventana.ShowDialog();
+            cargar_form();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

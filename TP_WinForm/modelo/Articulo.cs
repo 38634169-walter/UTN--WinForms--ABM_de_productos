@@ -10,8 +10,8 @@ namespace modelo
 {
     public class Articulo
     {
-        public int id;
-        [DisplayName("Articulo")]
+        public int id { get; set; }
+        [DisplayName("Codigo")]
         public string codigo { get; set; }
         [DisplayName("Nombre")]
         public string nombre { get; set; }

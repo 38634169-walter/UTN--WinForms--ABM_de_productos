@@ -28,7 +28,10 @@ namespace negocio
                     art.codigo = (string)con.lector["Codigo"];
                     art.nombre = (string)con.lector["Nombre"];
                     art.descripcion = (string)con.lector["Descripcion"];
-                    art.imagenUrl = (string)con.lector["ImagenUrl"];
+                    if (!(con.lector["imagenUrl"] is DBNull))
+                    {
+                        art.imagenUrl = (string)con.lector["ImagenUrl"];
+                    }
                     art.precio = Convert.ToDouble(con.lector["Precio"]);
                     art.categoria = new Categoria();
                     art.categoria.id = Convert.ToInt32(con.lector["IdCategoria"]);
@@ -52,7 +55,9 @@ namespace negocio
             ConexionDB datos = new ConexionDB();
             try
             {
-                datos.consultar("INSERT into ARTICULOS (Codigo, Nombre, Descripcion) VALUES ('"+ nuevo.codigo +"', '"+ nuevo.nombre +"', '"+ nuevo.descripcion +"')");
+                datos.consultar("INSERT into ARTICULOS (Codigo, Nombre, Descripcion,IdMarca,IdCategoria,ImagenUrl,Precio) VALUES ('"+ nuevo.codigo +"', '"+ nuevo.nombre +"', '"+ nuevo.descripcion +"',@IdMarca,@IdCategoria,'" + nuevo.imagenUrl + "', '" + nuevo.precio + "' )");
+                datos.setear("@IdMarca",nuevo.marca.id);
+                datos.setear("@IdCategoria",nuevo.categoria.id);
                 datos.abrir_conexion_y_ejecutar();
             }
             catch (Exception ex)
@@ -69,14 +74,15 @@ namespace negocio
             ConexionDB con = new ConexionDB();
             try
             {
-                con.consultar("UPDATE ARTICULOS SET codigo=@codigo, nombre=@nombre, descripcion=@descripcion, IdMarca=@IdMarca, IdCategoria=@IdCategoria, ImagenUrl=@imagen, Precio=@precio");
+                con.consultar("UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idmarca, IdCategoria = @idcategoria, ImagenUrl = @imagen, Precio = @precio WHERE Id = @id ");
                 con.setear("@codigo",mod.codigo);
                 con.setear("@nombre", mod.nombre);
                 con.setear("@descripcion", mod.descripcion);
-                con.setear("@IdMarca", mod.marca);
-                con.setear("@IdCategoria", mod.categoria);
+                con.setear("@idmarca", mod.marca.id);
+                con.setear("@idcategoria", mod.categoria.id);
                 con.setear("@imagen", mod.imagenUrl);
                 con.setear("@precio", mod.precio);
+                con.setear("@id", mod.id);
                 con.abrir_conexion_y_ejecutar();
             }
             catch (Exception ex)

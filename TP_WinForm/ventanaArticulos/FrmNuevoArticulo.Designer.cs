@@ -40,6 +40,7 @@ namespace ventanaArticulos
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBoxMinimizar = new System.Windows.Forms.PictureBox();
             this.tituloVentana = new System.Windows.Forms.Label();
             this.pictureBoxCerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -55,9 +56,11 @@ namespace ventanaArticulos
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBoxMinimizar = new System.Windows.Forms.PictureBox();
+            this.textBoxPrecio = new System.Windows.Forms.TextBox();
+            this.labelPrecio = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVerImagen)).BeginInit();
@@ -65,13 +68,12 @@ namespace ventanaArticulos
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
             // 
             this.lblCodigo.ForeColor = System.Drawing.Color.White;
-            this.lblCodigo.Location = new System.Drawing.Point(51, 158);
+            this.lblCodigo.Location = new System.Drawing.Point(51, 142);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(48, 23);
             this.lblCodigo.TabIndex = 0;
@@ -80,7 +82,7 @@ namespace ventanaArticulos
             // lblNombre
             // 
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(47, 181);
+            this.lblNombre.Location = new System.Drawing.Point(47, 165);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(52, 20);
             this.lblNombre.TabIndex = 1;
@@ -89,7 +91,7 @@ namespace ventanaArticulos
             // lblDescripcion
             // 
             this.lblDescripcion.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcion.Location = new System.Drawing.Point(31, 234);
+            this.lblDescripcion.Location = new System.Drawing.Point(31, 218);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(68, 19);
             this.lblDescripcion.TabIndex = 2;
@@ -98,7 +100,7 @@ namespace ventanaArticulos
             // textBoxImagen
             // 
             this.textBoxImagen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxImagen.Location = new System.Drawing.Point(102, 207);
+            this.textBoxImagen.Location = new System.Drawing.Point(102, 191);
             this.textBoxImagen.Name = "textBoxImagen";
             this.textBoxImagen.Size = new System.Drawing.Size(100, 20);
             this.textBoxImagen.TabIndex = 2;
@@ -107,7 +109,7 @@ namespace ventanaArticulos
             // textBoxNombre
             // 
             this.textBoxNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxNombre.Location = new System.Drawing.Point(102, 181);
+            this.textBoxNombre.Location = new System.Drawing.Point(102, 165);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(100, 20);
             this.textBoxNombre.TabIndex = 1;
@@ -115,7 +117,7 @@ namespace ventanaArticulos
             // textBoxDescripcion
             // 
             this.textBoxDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxDescripcion.Location = new System.Drawing.Point(102, 234);
+            this.textBoxDescripcion.Location = new System.Drawing.Point(102, 218);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(100, 20);
             this.textBoxDescripcion.TabIndex = 3;
@@ -166,6 +168,18 @@ namespace ventanaArticulos
             this.panel5.Size = new System.Drawing.Size(539, 27);
             this.panel5.TabIndex = 8;
             // 
+            // pictureBoxMinimizar
+            // 
+            this.pictureBoxMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMinimizar.Image")));
+            this.pictureBoxMinimizar.Location = new System.Drawing.Point(489, 0);
+            this.pictureBoxMinimizar.Name = "pictureBoxMinimizar";
+            this.pictureBoxMinimizar.Size = new System.Drawing.Size(27, 29);
+            this.pictureBoxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMinimizar.TabIndex = 7;
+            this.pictureBoxMinimizar.TabStop = false;
+            this.pictureBoxMinimizar.Click += new System.EventHandler(this.pictureBoxMinimizar_Click);
+            // 
             // tituloVentana
             // 
             this.tituloVentana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,7 +226,7 @@ namespace ventanaArticulos
             // 
             this.comboBoxCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxCategoria.FormattingEnabled = true;
-            this.comboBoxCategoria.Location = new System.Drawing.Point(102, 288);
+            this.comboBoxCategoria.Location = new System.Drawing.Point(102, 303);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(100, 21);
             this.comboBoxCategoria.TabIndex = 5;
@@ -221,7 +235,7 @@ namespace ventanaArticulos
             // 
             this.comboBoxMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxMarca.FormattingEnabled = true;
-            this.comboBoxMarca.Location = new System.Drawing.Point(102, 260);
+            this.comboBoxMarca.Location = new System.Drawing.Point(102, 275);
             this.comboBoxMarca.Name = "comboBoxMarca";
             this.comboBoxMarca.Size = new System.Drawing.Size(100, 21);
             this.comboBoxMarca.TabIndex = 4;
@@ -229,7 +243,7 @@ namespace ventanaArticulos
             // textBoxCodigo
             // 
             this.textBoxCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxCodigo.Location = new System.Drawing.Point(102, 155);
+            this.textBoxCodigo.Location = new System.Drawing.Point(102, 139);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(100, 20);
             this.textBoxCodigo.TabIndex = 0;
@@ -237,7 +251,7 @@ namespace ventanaArticulos
             // label4
             // 
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(33, 210);
+            this.label4.Location = new System.Drawing.Point(33, 194);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 24);
             this.label4.TabIndex = 9;
@@ -246,7 +260,7 @@ namespace ventanaArticulos
             // label3
             // 
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(41, 290);
+            this.label3.Location = new System.Drawing.Point(41, 305);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 18);
             this.label3.TabIndex = 8;
@@ -255,7 +269,7 @@ namespace ventanaArticulos
             // label2
             // 
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(56, 261);
+            this.label2.Location = new System.Drawing.Point(56, 276);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 17);
             this.label2.TabIndex = 7;
@@ -310,16 +324,22 @@ namespace ventanaArticulos
             this.panel4.Size = new System.Drawing.Size(277, 38);
             this.panel4.TabIndex = 0;
             // 
-            // pictureBoxMinimizar
+            // textBoxPrecio
             // 
-            this.pictureBoxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMinimizar.Image")));
-            this.pictureBoxMinimizar.Location = new System.Drawing.Point(489, 0);
-            this.pictureBoxMinimizar.Name = "pictureBoxMinimizar";
-            this.pictureBoxMinimizar.Size = new System.Drawing.Size(27, 29);
-            this.pictureBoxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxMinimizar.TabIndex = 7;
-            this.pictureBoxMinimizar.TabStop = false;
-            this.pictureBoxMinimizar.Click += new System.EventHandler(this.pictureBoxMinimizar_Click);
+            this.textBoxPrecio.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxPrecio.Location = new System.Drawing.Point(102, 246);
+            this.textBoxPrecio.Name = "textBoxPrecio";
+            this.textBoxPrecio.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPrecio.TabIndex = 16;
+            // 
+            // labelPrecio
+            // 
+            this.labelPrecio.ForeColor = System.Drawing.Color.White;
+            this.labelPrecio.Location = new System.Drawing.Point(55, 249);
+            this.labelPrecio.Name = "labelPrecio";
+            this.labelPrecio.Size = new System.Drawing.Size(41, 20);
+            this.labelPrecio.TabIndex = 17;
+            this.labelPrecio.Text = "Precio: ";
             // 
             // FrmNuevoArticulo
             // 
@@ -327,6 +347,8 @@ namespace ventanaArticulos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(539, 413);
+            this.Controls.Add(this.labelPrecio);
+            this.Controls.Add(this.textBoxPrecio);
             this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.pictureBoxVerImagen);
             this.Controls.Add(this.comboBoxCategoria);
@@ -351,6 +373,7 @@ namespace ventanaArticulos
             this.Load += new System.EventHandler(this.FrmNuevoArticulo_Load);
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVerImagen)).EndInit();
@@ -358,7 +381,6 @@ namespace ventanaArticulos
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,5 +414,7 @@ namespace ventanaArticulos
         private System.Windows.Forms.PictureBox pictureBoxCerrar;
         private System.Windows.Forms.Label tituloVentana;
         private System.Windows.Forms.PictureBox pictureBoxMinimizar;
+        private System.Windows.Forms.TextBox textBoxPrecio;
+        private System.Windows.Forms.Label labelPrecio;
     }
 }

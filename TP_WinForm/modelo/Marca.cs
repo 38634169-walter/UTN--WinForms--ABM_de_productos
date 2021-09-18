@@ -8,8 +8,8 @@ namespace modelo
 {
     public class Marca
     {
-        public int id;
-        public string descripcion;
+        public int id { get; set; }
+        public string descripcion { get; set; }
 
         public override string ToString()
         {
