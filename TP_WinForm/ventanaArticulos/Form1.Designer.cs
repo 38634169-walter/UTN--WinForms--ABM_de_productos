@@ -41,6 +41,7 @@ namespace ventanaArticulos
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.buttonEliminar = new FontAwesome.Sharp.IconButton();
             this.buttonModificar = new FontAwesome.Sharp.IconButton();
@@ -52,18 +53,17 @@ namespace ventanaArticulos
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBoxMinimizar = new System.Windows.Forms.PictureBox();
             this.tituloVentana = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBotones.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconoLupa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxArticulo
@@ -77,6 +77,7 @@ namespace ventanaArticulos
             // 
             // dgvArticulos
             // 
+            this.dgvArticulos.AllowUserToResizeRows = false;
             this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulos.BackgroundColor = System.Drawing.Color.Black;
             this.dgvArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -160,6 +161,16 @@ namespace ventanaArticulos
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(151, 341);
             this.panel2.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(148, 142);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // panelBotones
             // 
@@ -254,7 +265,7 @@ namespace ventanaArticulos
             this.panel5.Controls.Add(this.pictureBoxArticulo);
             this.panel5.Controls.Add(this.dgvArticulos);
             this.panel5.Controls.Add(this.labelDatosArticulo);
-            this.panel5.Location = new System.Drawing.Point(147, 26);
+            this.panel5.Location = new System.Drawing.Point(147, 27);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(539, 442);
             this.panel5.TabIndex = 6;
@@ -328,16 +339,6 @@ namespace ventanaArticulos
             this.tituloVentana.TabIndex = 7;
             this.tituloVentana.Text = "Casa Hogar S.A";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 139);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,6 +360,7 @@ namespace ventanaArticulos
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -367,7 +369,6 @@ namespace ventanaArticulos
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
