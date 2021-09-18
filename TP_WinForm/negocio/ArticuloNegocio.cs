@@ -94,5 +94,39 @@ namespace negocio
                 con.cerrar_conexion();
             }
         }
+
+        public List<Articulo> buscar(string nombreArticulo)
+        {
+            ConexionDB con = new ConexionDB();
+            List<Articulo> listaArticulo = new List<Articulo>();
+            try
+            {
+                con.consultar("SELECT a.Id AS IdArticulo,Codigo, Nombre, a.Descripcion AS Descripcion, ImagenUrl, m.Id AS IdMarca, m.Descripcion AS Marca, c.Id AS IdCategoria, c.Descripcion AS Categoria, Precio FROM ARTICULOS AS a, CATEGORIAS AS c, MARCAS AS m WHERE a.IdMarca = m.Id AND a.IdCategoria = c.Id AND a.Nombre LIKE '%" + nombreArticulo +"%' ");
+                con.abrir_conexion_y_consultar();
+                while (con.lector.Read())
+                {
+                    Articulo art = new Articulo();
+                    art.id = Convert.ToInt32(con.lector["IdArticulo"]);
+                    art.codigo = (string)con.lector["Codigo"];
+                    art.nombre = (string)con.lector["Nombre"];
+                    art.descripcion = (string)con.lector["Descripcion"];
+                    art.imagenUrl = (string)con.lector["ImagenUrl"];
+                    art.marca = new Marca();
+                    art.marca.id = Convert.ToInt32(con.lector["IdMarca"]);
+                    art.marca.descripcion = (string)con.lector["Marca"];
+                    art.categoria = new Categoria();
+                    art.categoria.id = Convert.ToInt32(con.lector["IdCategoria"]);
+                    art.categoria.descripcion = (string)con.lector["Categoria"];
+                    art.precio = Convert.ToDouble(con.lector["Precio"]);
+                    listaArticulo.Add(art);
+                }
+                con.cerrar_conexion();
+                return listaArticulo;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

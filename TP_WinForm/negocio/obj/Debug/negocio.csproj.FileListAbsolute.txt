@@ -16,3 +16,4 @@ C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\negocio\obj\Debug\negocio.c
 C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\negocio\obj\Debug\negocio.csproj.CopyComplete
 C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\negocio\obj\Debug\negocio.dll
 C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\negocio\obj\Debug\negocio.pdb
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\negocio\bin\Debug\FontAwesome.Sharp.dll

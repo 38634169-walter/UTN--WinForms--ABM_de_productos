@@ -63,21 +63,6 @@ namespace ventanaArticulos
             mostrar_datos_articulo(art.imagenUrl,art.descripcion,art.precio,art.marca.descripcion,art.categoria.descripcion);
         }
 
-        private void buttonAgregar_Click(object sender, EventArgs e)
-        {
-            FrmNuevoArticulo alta = new FrmNuevoArticulo();
-            alta.ShowDialog();
-            cargar_form();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Articulo art =(Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            FrmNuevoArticulo ventana = new FrmNuevoArticulo(art);
-            ventana.ShowDialog();
-            cargar_form();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Close();
@@ -87,5 +72,59 @@ namespace ventanaArticulos
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void buscador_Click(object sender, EventArgs e)
+        {
+            buscador.Text = "";
+            buscador.ForeColor = Color.Black;
+        }
+
+        private void buscador_Leave(object sender, EventArgs e)
+        {
+            if(buscador.Text == "")
+            {
+                buscador.Text = "Ingresar nombre de articulo";
+            }
+            else
+            {
+                buscar();
+            }
+        }
+
+        private void iconoLupa_Click(object sender, EventArgs e)
+        {
+            buscar();
+        }
+        public void buscar()
+        {
+            string palabra=buscador.Text;
+            ArticuloNegocio artNego = new ArticuloNegocio();
+            listaArticulos = artNego.buscar(palabra);
+            dgvArticulos.DataSource = listaArticulos;
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Articulo art = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                FrmNuevoArticulo ventana = new FrmNuevoArticulo(art);
+                ventana.ShowDialog();
+                cargar_form();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void buttonAgregar_Click_1(object sender, EventArgs e)
+        {
+            FrmNuevoArticulo alta = new FrmNuevoArticulo();
+            alta.ShowDialog();
+            cargar_form();
+        }
     }
 }
+

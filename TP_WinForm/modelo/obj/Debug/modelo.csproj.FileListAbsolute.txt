@@ -10,3 +10,5 @@ C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\modelo\obj\Debug\modelo.csp
 C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\modelo\obj\Debug\modelo.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\modelo\obj\Debug\modelo.dll
 C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\modelo\obj\Debug\modelo.pdb
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\modelo\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\modelo\obj\Debug\modelo.csproj.CopyComplete
