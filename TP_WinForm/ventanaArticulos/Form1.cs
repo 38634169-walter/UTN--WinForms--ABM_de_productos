@@ -103,20 +103,12 @@ namespace ventanaArticulos
             dgvArticulos.DataSource = listaArticulos;
         }
 
-        private void buttonModificar_Click(object sender, EventArgs e)
+        private void buttonModificar_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                Articulo art = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                FrmNuevoArticulo ventana = new FrmNuevoArticulo(art);
-                ventana.ShowDialog();
-                cargar_form();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
+            Articulo art = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            FrmNuevoArticulo modificar = new FrmNuevoArticulo(art);
+            modificar.ShowDialog();
+            cargar_form();
         }
 
         private void buttonAgregar_Click_1(object sender, EventArgs e)
@@ -125,6 +117,61 @@ namespace ventanaArticulos
             alta.ShowDialog();
             cargar_form();
         }
+
+        private void buttonAgregar_MouseHover(object sender, EventArgs e)
+        {
+            buttonAgregar.ForeColor = Color.Cyan;
+            buttonAgregar.IconColor = Color.Cyan;
+            buttonAgregar.IconSize = 50;
+            Font fuente = new Font(buttonAgregar.Font.FontFamily, 9);
+            buttonAgregar.Font = fuente;
+        }
+
+        private void buttonAgregar_MouseLeave(object sender, EventArgs e)
+        {
+            buttonAgregar.ForeColor = Color.White;
+            buttonAgregar.IconColor = Color.White;
+            buttonAgregar.IconSize = 40;
+            Font fuente = new Font(buttonAgregar.Font.FontFamily, 8);
+            buttonAgregar.Font = fuente;
+        }
+
+        private void buttonModificar_MouseHover(object sender, EventArgs e)
+        {
+            buttonModificar.ForeColor = Color.Cyan;
+            buttonModificar.IconColor = Color.Cyan;
+            buttonModificar.IconSize = 50;
+            Font fuente = new Font(buttonModificar.Font.FontFamily, 9);
+            buttonModificar.Font = fuente;
+        }
+
+        private void buttonModificar_MouseLeave(object sender, EventArgs e)
+        {
+            buttonModificar.ForeColor = Color.White;
+            buttonModificar.IconColor = Color.White;
+            buttonModificar.IconSize = 40;
+            Font fuente = new Font(buttonModificar.Font.FontFamily, 8);
+            buttonModificar.Font = fuente;
+        }
+
+        private void buttonEliminar_MouseHover(object sender, EventArgs e)
+        {
+            buttonEliminar.ForeColor = Color.Cyan;
+            buttonEliminar.IconColor = Color.Cyan;
+            buttonEliminar.IconSize = 50;
+            Font fuente = new Font(buttonEliminar.Font.FontFamily, 9);
+            buttonEliminar.Font = fuente;
+        }
+
+        private void buttonEliminar_MouseLeave(object sender, EventArgs e)
+        {
+            buttonEliminar.ForeColor = Color.White;
+            buttonEliminar.IconColor = Color.White;
+            buttonEliminar.IconSize = 40;
+            Font fuente = new Font(buttonEliminar.Font.FontFamily, 8);
+            buttonEliminar.Font = fuente;
+        }
+
     }
 }
 

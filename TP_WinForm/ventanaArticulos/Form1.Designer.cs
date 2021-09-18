@@ -40,11 +40,11 @@ namespace ventanaArticulos
             this.labelDatosArticulo = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.buttonAgregar = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonEliminar = new FontAwesome.Sharp.IconButton();
             this.panelBotones = new System.Windows.Forms.Panel();
+            this.buttonEliminar = new FontAwesome.Sharp.IconButton();
             this.buttonModificar = new FontAwesome.Sharp.IconButton();
+            this.buttonAgregar = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.iconoLupa = new System.Windows.Forms.PictureBox();
             this.buscador = new System.Windows.Forms.TextBox();
@@ -52,6 +52,7 @@ namespace ventanaArticulos
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBoxMinimizar = new System.Windows.Forms.PictureBox();
             this.tituloVentana = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -62,6 +63,7 @@ namespace ventanaArticulos
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxArticulo
@@ -82,7 +84,7 @@ namespace ventanaArticulos
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -149,17 +151,88 @@ namespace ventanaArticulos
             this.panelMenu.Size = new System.Drawing.Size(151, 442);
             this.panelMenu.TabIndex = 5;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.panelBotones);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(151, 341);
+            this.panel2.TabIndex = 3;
+            // 
+            // panelBotones
+            // 
+            this.panelBotones.Controls.Add(this.buttonEliminar);
+            this.panelBotones.Controls.Add(this.buttonModificar);
+            this.panelBotones.Controls.Add(this.buttonAgregar);
+            this.panelBotones.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBotones.Location = new System.Drawing.Point(0, 184);
+            this.panelBotones.Name = "panelBotones";
+            this.panelBotones.Size = new System.Drawing.Size(151, 157);
+            this.panelBotones.TabIndex = 4;
+            // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.AutoSize = true;
+            this.buttonEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonEliminar.FlatAppearance.BorderSize = 0;
+            this.buttonEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminar.ForeColor = System.Drawing.Color.White;
+            this.buttonEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.buttonEliminar.IconColor = System.Drawing.Color.White;
+            this.buttonEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonEliminar.IconSize = 40;
+            this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEliminar.Location = new System.Drawing.Point(0, 102);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(151, 51);
+            this.buttonEliminar.TabIndex = 5;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.MouseLeave += new System.EventHandler(this.buttonEliminar_MouseLeave);
+            this.buttonEliminar.MouseHover += new System.EventHandler(this.buttonEliminar_MouseHover);
+            // 
+            // buttonModificar
+            // 
+            this.buttonModificar.AutoSize = true;
+            this.buttonModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonModificar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonModificar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonModificar.FlatAppearance.BorderSize = 0;
+            this.buttonModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModificar.ForeColor = System.Drawing.Color.White;
+            this.buttonModificar.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.buttonModificar.IconColor = System.Drawing.Color.White;
+            this.buttonModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonModificar.IconSize = 40;
+            this.buttonModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonModificar.Location = new System.Drawing.Point(0, 51);
+            this.buttonModificar.Name = "buttonModificar";
+            this.buttonModificar.Size = new System.Drawing.Size(151, 51);
+            this.buttonModificar.TabIndex = 6;
+            this.buttonModificar.Text = "Modificar";
+            this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click_1);
+            this.buttonModificar.MouseLeave += new System.EventHandler(this.buttonModificar_MouseLeave);
+            this.buttonModificar.MouseHover += new System.EventHandler(this.buttonModificar_MouseHover);
+            // 
             // buttonAgregar
             // 
+            this.buttonAgregar.AutoSize = true;
             this.buttonAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAgregar.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonAgregar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonAgregar.FlatAppearance.BorderSize = 0;
             this.buttonAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.buttonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAgregar.ForeColor = System.Drawing.Color.Cyan;
+            this.buttonAgregar.ForeColor = System.Drawing.Color.White;
             this.buttonAgregar.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
-            this.buttonAgregar.IconColor = System.Drawing.Color.Cyan;
+            this.buttonAgregar.IconColor = System.Drawing.Color.White;
             this.buttonAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonAgregar.IconSize = 40;
             this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -170,69 +243,8 @@ namespace ventanaArticulos
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.UseVisualStyleBackColor = true;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click_1);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panelBotones);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(151, 242);
-            this.panel2.TabIndex = 3;
-            // 
-            // buttonEliminar
-            // 
-            this.buttonEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEliminar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonEliminar.FlatAppearance.BorderSize = 0;
-            this.buttonEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminar.ForeColor = System.Drawing.Color.Cyan;
-            this.buttonEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.buttonEliminar.IconColor = System.Drawing.Color.Cyan;
-            this.buttonEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonEliminar.IconSize = 40;
-            this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar.Location = new System.Drawing.Point(0, 102);
-            this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(151, 51);
-            this.buttonEliminar.TabIndex = 5;
-            this.buttonEliminar.Text = "Eliminar";
-            this.buttonEliminar.UseVisualStyleBackColor = true;
-            // 
-            // panelBotones
-            // 
-            this.panelBotones.Controls.Add(this.buttonEliminar);
-            this.panelBotones.Controls.Add(this.buttonModificar);
-            this.panelBotones.Controls.Add(this.buttonAgregar);
-            this.panelBotones.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBotones.Location = new System.Drawing.Point(0, 85);
-            this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(151, 157);
-            this.panelBotones.TabIndex = 4;
-            // 
-            // buttonModificar
-            // 
-            this.buttonModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonModificar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonModificar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonModificar.FlatAppearance.BorderSize = 0;
-            this.buttonModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModificar.ForeColor = System.Drawing.Color.Cyan;
-            this.buttonModificar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.buttonModificar.IconColor = System.Drawing.Color.Cyan;
-            this.buttonModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonModificar.IconSize = 40;
-            this.buttonModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonModificar.Location = new System.Drawing.Point(0, 51);
-            this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(151, 51);
-            this.buttonModificar.TabIndex = 6;
-            this.buttonModificar.Text = "Modificar";
-            this.buttonModificar.UseVisualStyleBackColor = true;
-            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
+            this.buttonAgregar.MouseLeave += new System.EventHandler(this.buttonAgregar_MouseLeave);
+            this.buttonAgregar.MouseHover += new System.EventHandler(this.buttonAgregar_MouseHover);
             // 
             // panel5
             // 
@@ -251,7 +263,7 @@ namespace ventanaArticulos
             // 
             this.iconoLupa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconoLupa.Image = ((System.Drawing.Image)(resources.GetObject("iconoLupa.Image")));
-            this.iconoLupa.Location = new System.Drawing.Point(420, 13);
+            this.iconoLupa.Location = new System.Drawing.Point(455, 14);
             this.iconoLupa.Name = "iconoLupa";
             this.iconoLupa.Size = new System.Drawing.Size(25, 27);
             this.iconoLupa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,7 +276,7 @@ namespace ventanaArticulos
             this.buscador.ForeColor = System.Drawing.SystemColors.GrayText;
             this.buscador.Location = new System.Drawing.Point(59, 17);
             this.buscador.Name = "buscador";
-            this.buscador.Size = new System.Drawing.Size(356, 20);
+            this.buscador.Size = new System.Drawing.Size(390, 20);
             this.buscador.TabIndex = 4;
             this.buscador.Text = "Ingresar nombre de articulo";
             this.buscador.Click += new System.EventHandler(this.buscador_Click);
@@ -316,6 +328,16 @@ namespace ventanaArticulos
             this.tituloVentana.TabIndex = 7;
             this.tituloVentana.Text = "Casa Hogar S.A";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(148, 139);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,12 +360,14 @@ namespace ventanaArticulos
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panelBotones.ResumeLayout(false);
+            this.panelBotones.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconoLupa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCerrar)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -367,6 +391,7 @@ namespace ventanaArticulos
         private FontAwesome.Sharp.IconButton buttonEliminar;
         private FontAwesome.Sharp.IconButton buttonAgregar;
         private FontAwesome.Sharp.IconButton buttonModificar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
