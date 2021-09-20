@@ -128,5 +128,24 @@ namespace negocio
                 throw ex;
             }
         }
+
+        public void eliminar(Articulo art)
+        {
+            ConexionDB con = new ConexionDB();
+            try
+            {
+                con.consultar("DELETE FROM ARTICULOS WHERE Id = " + art.id +" ");
+                con.abrir_conexion_y_ejecutar();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                con.cerrar_conexion();
+            }
+        }
     }
 }

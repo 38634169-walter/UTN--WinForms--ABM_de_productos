@@ -172,6 +172,14 @@ namespace ventanaArticulos
             buttonEliminar.Font = fuente;
         }
 
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            Articulo art = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            FormEliminar ventana = new FormEliminar(art);
+            ventana.ShowDialog();
+            cargar_form();
+        }
+
     }
 }
 

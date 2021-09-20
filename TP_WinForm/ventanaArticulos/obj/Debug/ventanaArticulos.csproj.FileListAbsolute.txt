@@ -31,3 +31,4 @@ C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\obj\Debug\
 C:\Users\User\Source\Repos\UTN-TP_WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.FrmNuevoArticulo.resources
 C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.FrmNuevoArticulo.resources
 C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\ventanaArticulos\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\ImARobotBitch\Desktop\UTN\2DO AÑO (1er cuatrimestre)\PROGRAMACION 3\TPs\TP WinForm\TP_WinForm\ventanaArticulos\obj\Debug\ventanaArticulos.FormEliminar.resources
